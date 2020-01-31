@@ -25,6 +25,7 @@ import { getJsonHeaders } from '../../../../ApiHelpers/HttpClient';
 import AppInsightsService from '../../../../ApiHelpers/AppInsightsService';
 import { StartupInfoContext } from '../../../../StartupInfoContext';
 import { AppInsightsComponent } from '../../../../models/app-insights';
+import { style } from 'typestyle';
 
 interface FunctionEditorDataLoaderProps {
   resourceId: string;
@@ -49,6 +50,9 @@ const FunctionEditorDataLoader: React.FC<FunctionEditorDataLoaderProps> = props 
   const [hostUrls, setHostUrls] = useState<UrlObj[]>([]);
   const [functionUrls, setFunctionUrls] = useState<UrlObj[]>([]);
   const [appInsightsComponent, setAppInsightsComponent] = useState<ArmObj<AppInsightsComponent> | undefined>(undefined);
+  const [testPanelRef, setTestPanelRef] = useState<any>(null);
+  const [editorStyle, setEditorStyle] = useState<string>('');
+  const [showTestPanel, setShowTestPanel] = useState(false);
 
   const siteContext = useContext(SiteRouterContext);
   const startupInfoContext = useContext(StartupInfoContext);
@@ -289,7 +293,18 @@ const FunctionEditorDataLoader: React.FC<FunctionEditorDataLoaderProps> = props 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  useEffect(() => {
+    console.log(testPanelRef);
+    if (!!testPanelRef && showTestPanel) {
+      setEditorStyle(
+        style({
+          width: `calc(100vw - 644px)`,
+        })
+      );
+    } else {
+      setEditorStyle('');
+    }
+  }, [testPanelRef, showTestPanel]);
   useEffect(() => {
     if (appInsightsComponent && !appInsightsToken) {
       AppInsightsService.getAppInsightsComponentToken(appInsightsComponent.id).then(appInsightsComponentTokenResponse => {
@@ -327,18 +342,23 @@ const FunctionEditorDataLoader: React.FC<FunctionEditorDataLoaderProps> = props 
   }
   return (
     <FunctionEditorContext.Provider value={functionEditorData}>
-      <FunctionEditor
-        functionInfo={functionInfo}
-        site={site}
-        run={run}
-        fileList={fileList}
-        runtimeVersion={runtimeVersion}
-        responseContent={responseContent}
-        functionRunning={functionRunning}
-        appInsightsToken={appInsightsToken}
-        urlObjs={[...hostUrls, ...functionUrls]}
-        resetAppInsightsToken={resetAppInsightsToken}
-      />
+      <div className={editorStyle}>
+        <FunctionEditor
+          functionInfo={functionInfo}
+          site={site}
+          run={run}
+          fileList={fileList}
+          runtimeVersion={runtimeVersion}
+          responseContent={responseContent}
+          functionRunning={functionRunning}
+          appInsightsToken={appInsightsToken}
+          urlObjs={[...hostUrls, ...functionUrls]}
+          resetAppInsightsToken={resetAppInsightsToken}
+          setTestPanelRef={setTestPanelRef}
+          showTestPanel={showTestPanel}
+          setShowTestPanel={setShowTestPanel}
+        />
+      </div>
     </FunctionEditorContext.Provider>
   );
 };

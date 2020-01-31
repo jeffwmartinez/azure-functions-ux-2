@@ -29,6 +29,9 @@ export interface FunctionEditorProps {
   functionRunning: boolean;
   urlObjs: UrlObj[];
   resetAppInsightsToken: () => void;
+  setTestPanelRef: (ref: any) => void;
+  showTestPanel: boolean;
+  setShowTestPanel: (show: boolean) => void;
   responseContent?: ResponseContent;
   runtimeVersion?: string;
   fileList?: VfsObject[];
@@ -46,8 +49,10 @@ export const FunctionEditor: React.SFC<FunctionEditorProps> = props => {
     urlObjs,
     appInsightsToken,
     resetAppInsightsToken,
+    setTestPanelRef,
+    showTestPanel,
+    setShowTestPanel,
   } = props;
-  const [showTestPanel, setShowTestPanel] = useState(false);
   const [reqBody, setReqBody] = useState('');
   const [fetchingFileContent, setFetchingFileContent] = useState(false);
   const [fileContent, setFileContent] = useState<FileContent>({ default: '', latest: '' });
@@ -291,7 +296,9 @@ export const FunctionEditor: React.SFC<FunctionEditorProps> = props => {
         isOpen={showTestPanel}
         onDismiss={onCancelTest}
         overlay={functionRunning}
-        headerContent={getHeaderContent()}>
+        headerContent={getHeaderContent()}
+        componentRef={ref => setTestPanelRef(ref)}
+        isBlocking={false}>
         {functionRunning && <LoadingComponent className={testLoadingStyle} />}
         <FunctionTest
           cancel={onCancelTest}
