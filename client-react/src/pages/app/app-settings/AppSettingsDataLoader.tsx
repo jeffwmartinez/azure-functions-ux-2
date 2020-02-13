@@ -290,19 +290,25 @@ const AppSettingsDataLoader: React.FC<AppSettingsDataLoaderProps> = props => {
     const notificationId = portalContext.startNotification(t('configUpdating'), t('configUpdating'));
     const siteUpdate = updateSite(resourceId, site);
     const configUpdate = updateWebConfig(resourceId, getCleanedConfigForSave(config));
-    const slotConfigUpdates = productionPermissions ? updateSlotConfigNames(resourceId, slotConfigNames) : Promise.resolve(null);
-    const storageUpdateCall = updateStorageMounts(resourceId, storageMounts);
-    const [siteResult, configResult, slotConfigResults] = await Promise.all([
+    const slotConfigNamesUpdate = productionPermissions ? updateSlotConfigNames(resourceId, slotConfigNames) : Promise.resolve(null);
+    const storageMountsUpdate = updateStorageMounts(resourceId, storageMounts);
+    const [siteResult, configResult, slotConfigNamesResult, storageMountsResult] = await Promise.all([
       siteUpdate,
       configUpdate,
-      slotConfigUpdates,
-      storageUpdateCall,
+      slotConfigNamesUpdate,
+      storageMountsUpdate,
     ]);
 
-    if (siteResult.metadata.success && configResult.metadata.success && (!slotConfigResults || slotConfigResults.metadata.success)) {
+    const success =
+      siteResult!.metadata.success &&
+      configResult!.metadata.success &&
+      (!slotConfigNamesResult || slotConfigNamesResult.metadata.success) &&
+      (!storageMountsResult || storageMountsResult.metadata.success);
+
+    if (success) {
       setInitialValues({
         ...values,
-        virtualApplications: flattenVirtualApplicationsList(configResult.data.properties.virtualApplications),
+        virtualApplications: flattenVirtualApplicationsList(configResult!.data.properties.virtualApplications),
       });
       fetchReferences();
       if (isFunctionApp(site)) {
@@ -310,10 +316,11 @@ const AppSettingsDataLoader: React.FC<AppSettingsDataLoaderProps> = props => {
       }
       portalContext.stopNotification(notificationId, true, t('configUpdateSuccess'));
     } else {
-      const siteError = siteResult.metadata.error && siteResult.metadata.error.Message;
-      const configError = configResult.metadata.error && configResult.metadata.error.Message;
-      const slotConfigError = slotConfigResults && slotConfigResults.metadata.error && slotConfigResults.metadata.error.Message;
-      const errMessage = siteError || configError || slotConfigError || t('configUpdateFailure');
+      const siteError = siteResult!.metadata.error && siteResult!.metadata.error.Message;
+      const configError = configResult!.metadata.error && configResult!.metadata.error.Message;
+      const slotConfigError = slotConfigNamesResult && slotConfigNamesResult.metadata.error && slotConfigNamesResult.metadata.error.Message;
+      const storageMountsError = storageMountsResult && storageMountsResult.metadata.error && storageMountsResult.metadata.error.Message;
+      const errMessage = siteError || configError || slotConfigError || storageMountsError || t('configUpdateFailure');
       portalContext.stopNotification(notificationId, false, errMessage);
     }
     setSaving(false);
