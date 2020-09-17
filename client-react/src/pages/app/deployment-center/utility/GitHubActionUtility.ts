@@ -555,7 +555,7 @@ jobs:
 
     - uses: azure/docker-login@v1
       with:
-        login-server: ${server}
+        login-server: ${serverUrl.toLocaleLowerCase()}
         username: \${{ secrets.${containerUsernameSecretName} }}
         password: \${{ secrets.${containerPasswordSecretName} }}
 
