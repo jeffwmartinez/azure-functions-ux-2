@@ -4173,6 +4173,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";creatingFunction" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Creating function...]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[함수를 만드는 중...]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";credentials" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Credentials]]></Val>
@@ -11166,6 +11175,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";functionSupportedRuntimeVersionNotConfiguredMessage" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Your app is not pinned to a supported runtime version. It might affect your app's performance. Please use one of the supported runtime version - {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[앱이 지원되는 런타임 버전에 고정되어 있지 않습니다. 앱의 성능에 영향을 줄 수 있습니다. 지원되는 런타임 버전({0}) 중 하나를 사용하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";functionTestInput" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Input]]></Val>
@@ -11360,6 +11378,24 @@
           <Val><![CDATA[Your app is currently pinned to runtime version '{0}' and will no longer receive security upgrades after October 2020. It is recommended that you upgrade to the latest version of the runtime. Refer to this article for more information.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[현재 앱이 런타임 버전 '{0}'에 고정되어 있으며, 2020년 10월 이후 보안 업그레이드를 더 이상 받지 않습니다. 최신 버전의 런타임으로 업그레이드하는 것이 좋습니다. 자세한 내용은 이 문서를 참조하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";functionsSupportedRuntimeVersionMissingWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The runtime version is not configured for your app. As a result the runtime cannot be started. Please use a valid runtime version (e.g. ~3).]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[앱에 대해 런타임 버전이 구성되지 않았습니다. 결과적으로 런타임을 시작할 수 없습니다. 유효한 런타임 버전(예: ~3)을 사용하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";functionsSupportedRuntimeVersionMissingWarningWithVersionList" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The runtime version is not configured for your app. As a result the runtime cannot be started. Please use one of the supported runtime version - {0}.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[앱에 대해 런타임 버전이 구성되지 않았습니다. 결과적으로 런타임을 시작할 수 없습니다. 지원되는 런타임 버전({0}) 중 하나를 사용하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -11945,6 +11981,24 @@
           <Val><![CDATA[If you can't find an organization or repository, you might need to enable additional permissions on GitHub.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[조직 또는 리포지토리를 찾을 수 없는 경우 GitHub에 대한 추가 권한을 사용하도록 설정해야 할 수 있습니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";gridItemsCountAriaLabelPlural" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} results found]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0}개의 결과를 찾음]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";gridItemsCountAriaLabelSingular" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} result found]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0}개의 결과를 찾음]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -12887,6 +12941,15 @@
           <Val><![CDATA[Invalid Cron Expression. Please consult the <a href="{0}" target="_blank">documentation</a> to learn more.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Cron 식이 잘못되었습니다. 자세한 내용은 <a href="{0}" target="_blank">설명서</a>를 참조하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";invalidFileSelectedWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid {0} file was selected. Please upload a valid file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[잘못된 {0} 파일이 선택되었습니다. 올바른 파일을 업로드하세요.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13970,10 +14033,13 @@
       </Item>
       <Item ItemId=";missingCorsMessage" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Your app is missing the CORS rule, '{0}'. Click here to add the rule to test the function from the browser.]]></Val>
+          <Val><![CDATA[Running your function in portal requires the app to explicitly accept requests from {0}. This is known as cross-origin resource sharing (CORS). Click here to add {0} to the allowed origin configuration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[앱에 CORS 규칙 '{0}'이(가) 없습니다. 브라우저에서 기능을 테스트하는 규칙을 추가하려면 여기를 클릭하세요.]]></Val>
+            <Val><![CDATA[포털에서 함수를 실행하려면 앱이 {0}의 요청을 명시적으로 수락해야 합니다. 이를 CORS(원본 간 리소스 공유)라고 합니다. 허용된 원본 구성에 {0}을(를) 추가하려면 여기를 클릭하세요.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Your app is missing the CORS rule, '{0}'. Click here to add the rule to test the function from the browser.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -16577,10 +16643,13 @@
       </Item>
       <Item ItemId=";readonlyBlobStorageWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Mounted Blob containers will become read only in Feb 2020.]]></Val>
+          <Val><![CDATA[Mounted Blob containers are read only.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[탑재된 Blob 컨테이너가 2020년 2월에 읽기 전용이 됩니다.]]></Val>
+            <Val><![CDATA[탑재된 BLOB 컨테이너는 읽기 전용입니다.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Mounted Blob containers will become read only in Feb 2020.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -21540,6 +21609,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";validFileShouldBeSelectedWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Please select a valid file to upload.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[업로드할 올바른 파일을 선택하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";validate_workingDirectory" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Working directory path should be relative to root of the repository, and cannot start with /, \ or drive names(C:/) in case of Windows. If working directory is in src folder of repository, path should be src/]]></Val>
@@ -21654,29 +21732,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";validation_mountNameAllowedCharacters" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Mount path must be a fully qualified path and can only include alphanumeric characters, underscores, hyphens, forward slashes, square brackets, and parenthesis]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[탑재 경로는 정규화된 경로여야 하며 영숫자, 밑줄, 하이픈, 슬래시, 대괄호 및 괄호만 포함할 수 있음]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";validation_mountPathNotHome" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Mount path cannot be '/home']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[탑재 경로는 '/home'일 수 없음]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";validation_mountPathNotRoot" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Mount path cannot be '/']]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[탑재 경로는 '/'일 수 없음]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

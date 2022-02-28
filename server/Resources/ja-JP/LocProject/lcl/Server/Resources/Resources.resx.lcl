@@ -4176,6 +4176,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";creatingFunction" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Creating function...]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[関数を作成しています...]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";credentials" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Credentials]]></Val>
@@ -11967,6 +11976,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";gridItemsCountAriaLabelPlural" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} results found]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 件の結果が見つかりました]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";gridItemsCountAriaLabelSingular" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} result found]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} 件の結果が見つかりました]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";grouping_location" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Group by location]]></Val>
@@ -12908,6 +12935,15 @@
           <Val><![CDATA[Invalid Cron Expression. Please consult the <a href="{0}" target="_blank">documentation</a> to learn more.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Cron 式が無効です。詳細については、<a href="{0}" target="_blank">ドキュメント</a>を参照してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";invalidFileSelectedWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid {0} file was selected. Please upload a valid file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[無効な {0} ファイルが選択されました。有効なファイルをアップロードしてください。]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13994,10 +14030,13 @@
       </Item>
       <Item ItemId=";missingCorsMessage" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Your app is missing the CORS rule, '{0}'. Click here to add the rule to test the function from the browser.]]></Val>
+          <Val><![CDATA[Running your function in portal requires the app to explicitly accept requests from {0}. This is known as cross-origin resource sharing (CORS). Click here to add {0} to the allowed origin configuration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[アプリに CORS ルール '{0}' がありません。ブラウザーから関数をテストするルールを追加するには、こちらをクリックします。]]></Val>
+            <Val><![CDATA[ポータルで関数を実行するには、アプリが {0} からの要求を明示的に受け入れる必要があります。これはクロスオリジン リソース共有 (CORS) と呼ばれます。許可された配信元の構成に {0} を追加するには、こちらをクリックします。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Your app is missing the CORS rule, '{0}'. Click here to add the rule to test the function from the browser.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -16604,10 +16643,13 @@
       </Item>
       <Item ItemId=";readonlyBlobStorageWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Mounted Blob containers will become read only in Feb 2020.]]></Val>
+          <Val><![CDATA[Mounted Blob containers are read only.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[マウントされた BLOB コンテナーは、2020 年 2月に読み取り専用になります。]]></Val>
+            <Val><![CDATA[マウントされた BLOB コンテナーは読み取り専用です。]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Mounted Blob containers will become read only in Feb 2020.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -21585,6 +21627,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";validFileShouldBeSelectedWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Please select a valid file to upload.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[アップロードする有効なファイルを選択してください。]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";validate_workingDirectory" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Working directory path should be relative to root of the repository, and cannot start with /, \ or drive names(C:/) in case of Windows. If working directory is in src folder of repository, path should be src/]]></Val>
@@ -21699,29 +21750,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";validation_mountNameAllowedCharacters" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Mount path must be a fully qualified path and can only include alphanumeric characters, underscores, hyphens, forward slashes, square brackets, and parenthesis]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[マウント パスは完全修飾パスである必要があり、英数字、アンダースコア、ハイフン、スラッシュ、角かっこ、かっこのみを含めることができます]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";validation_mountPathNotHome" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Mount path cannot be '/home']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[マウント パスを '/home' にすることはできません]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";validation_mountPathNotRoot" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Mount path cannot be '/']]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[マウント パスを '/' にすることはできません]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

@@ -4167,6 +4167,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";creatingFunction" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Creating function...]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Création de la fonction]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";credentials" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Credentials]]></Val>
@@ -11955,6 +11964,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";gridItemsCountAriaLabelPlural" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} results found]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} résultats trouvés]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";gridItemsCountAriaLabelSingular" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} result found]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} résultat trouvé]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";grouping_location" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Group by location]]></Val>
@@ -12893,6 +12920,15 @@
           <Val><![CDATA[Invalid Cron Expression. Please consult the <a href="{0}" target="_blank">documentation</a> to learn more.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Expression Cron non valide. Consultez la <a href="{0}" target="_blank">documentation</a> pour en savoir plus.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";invalidFileSelectedWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid {0} file was selected. Please upload a valid file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Fichier {0} non valide sélectionné. Chargez un fichier valide.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13979,10 +14015,13 @@
       </Item>
       <Item ItemId=";missingCorsMessage" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Your app is missing the CORS rule, '{0}'. Click here to add the rule to test the function from the browser.]]></Val>
+          <Val><![CDATA[Running your function in portal requires the app to explicitly accept requests from {0}. This is known as cross-origin resource sharing (CORS). Click here to add {0} to the allowed origin configuration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Votre application ne dispose pas de la règle CORS, « {0} ». Cliquez ici pour ajouter la règle permettant de tester la fonction à partir du navigateur.]]></Val>
+            <Val><![CDATA[L’exécution de votre fonction dans le portail nécessite que l’application accepte explicitement les demandes de {0}. Il s’agit du partage de ressources cross-origin (CORS). Cliquez ici pour ajouter {0} à la configuration d’origine autorisée.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Your app is missing the CORS rule, '{0}'. Click here to add the rule to test the function from the browser.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -16586,10 +16625,13 @@
       </Item>
       <Item ItemId=";readonlyBlobStorageWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Mounted Blob containers will become read only in Feb 2020.]]></Val>
+          <Val><![CDATA[Mounted Blob containers are read only.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Les conteneurs blob montés passent en lecture seule en février 2020.]]></Val>
+            <Val><![CDATA[Les conteneurs de blobs montés sont en lecture seule.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Mounted Blob containers will become read only in Feb 2020.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -21549,6 +21591,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";validFileShouldBeSelectedWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Please select a valid file to upload.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Sélectionnez un fichier valide à charger.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";validate_workingDirectory" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Working directory path should be relative to root of the repository, and cannot start with /, \ or drive names(C:/) in case of Windows. If working directory is in src folder of repository, path should be src/]]></Val>
@@ -21663,29 +21714,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";validation_mountNameAllowedCharacters" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Mount path must be a fully qualified path and can only include alphanumeric characters, underscores, hyphens, forward slashes, square brackets, and parenthesis]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le chemin de montage doit être un chemin complet et peut contenir seulement des caractères alphanumériques, des traits de soulignement, des traits d'union, des barres obliques, des crochets et des parenthèses]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";validation_mountPathNotHome" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Mount path cannot be '/home']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Le chemin de montage ne peut pas être « /home »]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";validation_mountPathNotRoot" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Mount path cannot be '/']]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Le chemin de montage ne peut pas être « / »]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

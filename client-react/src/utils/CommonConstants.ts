@@ -31,12 +31,13 @@ export class CommonConstants {
     serviceBusApiVersion20150801: '2015-08-01',
     documentDBApiVersion20150408: '2015-04-08',
     appInsightsTokenApiVersion20150501: '2015-05-01',
-    quickpulseTokenApiVersion20200602preview: '2020-06-02-preview',
+    quickpulseTokenApiVersion20211014: '2021-10-14',
     appInsightsQueryApiVersion20180420: '2018-04-20',
     staticSitePreviewApiVersion20191201: '2019-12-01-preview',
     stacksApiVersion20201001: '2020-10-01',
     acrApiVersion20190501: '2019-05-01',
     staticSiteApiVersion20201201: '2020-12-01',
+    staticSiteApiVersion20210301: '2021-03-01',
     argApiVersion20210301: '2021-03-01',
     argApiVersion20180901Preview: '2018-09-01-preview',
     workflowApiVersion20201201: '2020-12-01',
@@ -55,18 +56,17 @@ export class CommonConstants {
     targetAzDevDeployment: 'targetAzDevDeployment',
     authTokenOverride: 'authTokenOverride',
     enableAzureMount: 'enableAzureMount',
-    enableAzureMountPathValidation: 'enableAzureMountPathValidation',
     showServiceLinkerConnector: 'showServiceLinkerConnector',
     enableGitHubOnNationalCloud: 'enableGitHubOnNationalCloud',
     treatAsKubeApp: 'treatAsKubeApp', // websitesextension_ext=appsvc.treatAsKubeApp%3Dtrue
     enableKubeScenarioForTesting: 'enableKubeScenarioForTesting',
-    enablePortalEditing: 'enablePortalEditing',
     disablePortalEditing: 'disablePortalEditing',
     enableAzureReposForLinux: 'enableAzureReposForLinux',
     enterpriseGradeEdgeItemVisible: 'enterpriseGradeEdgeItemVisible',
     enableACRManagedIdentities: 'enableACRManagedIdentities',
-    makeCallThroughPortal: 'makeCallThroughPortal',
     useStackApiForRuntimeVersion: 'useStackApiForRuntimeVersion',
+    useNewFunctionLogsApi: 'useNewFunctionLogsApi', //websitesextension_ext=appsvc.useNewFunctionLogsApi%3Dtrue
+    enablePasswordProtection: 'enablePasswordProtection', //websitesextension_ext=appsvc.enablePasswordProtection%3Dtrue
   };
 
   public static readonly AppDensityLimit = 8;
@@ -129,6 +129,17 @@ export class CommonConstants {
     usSec: 'https://live.applicationinsights.azure.microsoft.scloud/QuickPulseService.svc',
     usNat: 'https://live.applicationinsights.azure.eaglex.ic.gov/QuickPulseService.svc',
   };
+
+  public static readonly QuickPulseEndpointsWithoutService = {
+    quickPulseEndpoint: '/QuickPulseService.svc',
+    public: 'https://rt.services.visualstudio.com',
+    fairfax: 'https://quickpulse.applicationinsights.us',
+    mooncake: 'https://live.applicationinsights.azure.cn',
+    usSec: 'https://live.applicationinsights.azure.microsoft.scloud',
+    usNat: 'https://live.applicationinsights.azure.eaglex.ic.gov',
+  };
+
+  public static readonly LiveLogsSessionId = 'LiveLogsSessionId';
 
   public static readonly AppInsightsEndpoints = {
     public: 'https://api.applicationinsights.io/v1/apps',
@@ -217,6 +228,10 @@ export class CommonConstants {
 
   public static isKeyVaultReference = (value: string) => value.toLocaleLowerCase().startsWith('@microsoft.keyvault(');
 
+  public static isKeyVaultSecretUrl = (value: string) => {
+    return !!value && value.toLocaleLowerCase().startsWith('https://') && value.toLocaleLowerCase().search('.vault.azure.net/secrets') > 0;
+  };
+
   public static readonly BindingSettingNames = {
     connection: 'connection',
     connectionStringSetting: 'connectionStringSetting',
@@ -243,6 +258,9 @@ export class CommonConstants {
   public static readonly comma = ',';
 
   public static readonly space = ' ';
+
+  //min length is 8, must contain uppercase, lowercase, number, and symbol
+  public static readonly passwordMinimumRequirementsRegex = new RegExp(/^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,})$/);
 }
 
 export enum WorkerRuntimeLanguages {
@@ -289,9 +307,11 @@ export class SubscriptionQuotaIds {
 export class ExperimentationConstants {
   public static TreatmentFlight = {
     linuxPortalEditing: 'linux-portal-editing-variant',
+    portalCallOnEditor: 'enable-portal-call-editor',
   };
 
   public static ControlFlight = {
     linuxPortalEditing: 'linux-portal-editing-default',
+    portalCallOnEditor: 'disable-portal-call-editor',
   };
 }

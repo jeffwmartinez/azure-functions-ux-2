@@ -4176,6 +4176,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";creatingFunction" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Creating function...]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[İşlev oluşturuluyor...]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";credentials" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Credentials]]></Val>
@@ -11967,6 +11976,24 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";gridItemsCountAriaLabelPlural" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} results found]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} sonuç bulundu]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";gridItemsCountAriaLabelSingular" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[{0} result found]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[{0} sonuç bulundu]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";grouping_location" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Group by location]]></Val>
@@ -12905,6 +12932,15 @@
           <Val><![CDATA[Invalid Cron Expression. Please consult the <a href="{0}" target="_blank">documentation</a> to learn more.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Geçersiz Cron İfadesi. Daha fazla bilgi edinmek için lütfen <a href="{0}" target="_blank">belgelere</a> başvurun.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
+      <Item ItemId=";invalidFileSelectedWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Invalid {0} file was selected. Please upload a valid file.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Geçersiz {0} dosyası seçildi. Lütfen geçerli bir dosyayı karşıya yükleyin.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
@@ -13991,10 +14027,13 @@
       </Item>
       <Item ItemId=";missingCorsMessage" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Your app is missing the CORS rule, '{0}'. Click here to add the rule to test the function from the browser.]]></Val>
+          <Val><![CDATA[Running your function in portal requires the app to explicitly accept requests from {0}. This is known as cross-origin resource sharing (CORS). Click here to add {0} to the allowed origin configuration.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Uygulamanızda CORS kuralı '{0}' eksik. İşlevi tarayıcıdan test etmek üzere kuralı eklemek için buraya tıklayın.]]></Val>
+            <Val><![CDATA[İşlevinizi portalda çalıştırmak, uygulamanın {0} kaynağından gelen istekleri açıkça kabul etmesini gerektirir. Bu, çıkış noktaları arası kaynak paylaşımı (CORS) olarak bilinir. İzin verilen kaynak yapılandırmasına {0} eklemek için burayı tıklayın.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Your app is missing the CORS rule, '{0}'. Click here to add the rule to test the function from the browser.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -16595,10 +16634,13 @@
       </Item>
       <Item ItemId=";readonlyBlobStorageWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
-          <Val><![CDATA[Mounted Blob containers will become read only in Feb 2020.]]></Val>
+          <Val><![CDATA[Mounted Blob containers are read only.]]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Bağlı Blob kapsayıcıları Şubat 2020'de salt okunur hale gelecek.]]></Val>
+            <Val><![CDATA[Bağlı Blob kapsayıcıları salt okunur.]]></Val>
           </Tgt>
+          <Prev Cat="Text">
+            <Val><![CDATA[Mounted Blob containers will become read only in Feb 2020.]]></Val>
+          </Prev>
         </Str>
         <Disp Icon="Str" />
       </Item>
@@ -21558,6 +21600,15 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
+      <Item ItemId=";validFileShouldBeSelectedWarning" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Please select a valid file to upload.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Orig="New">
+            <Val><![CDATA[Lütfen karşıya yüklemek için geçerli bir dosya seçin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+      </Item>
       <Item ItemId=";validate_workingDirectory" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Working directory path should be relative to root of the repository, and cannot start with /, \ or drive names(C:/) in case of Windows. If working directory is in src folder of repository, path should be src/]]></Val>
@@ -21672,29 +21723,11 @@
         </Str>
         <Disp Icon="Str" />
       </Item>
-      <Item ItemId=";validation_mountNameAllowedCharacters" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Mount path must be a fully qualified path and can only include alphanumeric characters, underscores, hyphens, forward slashes, square brackets, and parenthesis]]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Bağlama yolu tam yol olmalıdır ve yalnızca alfasayısal karakterler, alt çizgiler, kısa çizgiler, eğik çizgiler, köşeli parantezler ve ayraçlar içerebilir]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
       <Item ItemId=";validation_mountPathNotHome" ItemType="0;.resx" PsrId="211" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Mount path cannot be '/home']]></Val>
           <Tgt Cat="Text" Stat="Loc" Orig="New">
             <Val><![CDATA[Bağlama yolu '/home' olamaz]]></Val>
-          </Tgt>
-        </Str>
-        <Disp Icon="Str" />
-      </Item>
-      <Item ItemId=";validation_mountPathNotRoot" ItemType="0;.resx" PsrId="211" Leaf="true">
-        <Str Cat="Text">
-          <Val><![CDATA[Mount path cannot be '/']]></Val>
-          <Tgt Cat="Text" Stat="Loc" Orig="New">
-            <Val><![CDATA[Bağlama yolu '/' olamaz]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />

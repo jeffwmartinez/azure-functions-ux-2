@@ -52,21 +52,19 @@ const getNodeStack: (useIsoDateFormat: boolean) => WebAppStack = (useIsoDateForm
                 runtimeVersion: 'NODE|16-lts',
                 remoteDebuggingSupported: false,
                 appInsightsSettings: {
-                  isSupported: false,
+                  isSupported: true,
                 },
                 gitHubActionSettings: {
                   isSupported: true,
                   supportedVersion: '16.x',
                 },
                 endOfLifeDate: node16EOL,
-                isEarlyAccess: true,
               },
               windowsRuntimeSettings: {
                 runtimeVersion: '~16',
-                isHidden: true,
                 remoteDebuggingSupported: false,
                 appInsightsSettings: {
-                  isSupported: false,
+                  isSupported: true,
                 },
                 gitHubActionSettings: {
                   isSupported: true,
