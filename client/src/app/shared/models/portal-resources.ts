@@ -1618,7 +1618,12 @@ export class PortalResources {
   public static clientCertificateMode = 'clientCertificateMode';
   public static clientCertificateModeRequire = 'clientCertificateModeRequire';
   public static clientCertificateModeAllow = 'clientCertificateModeAllow';
+  public static clientCertificateModeOptional = 'clientCertificateModeOptional';
   public static clientCertificateModeIgnore = 'clientCertificateModeIgnore';
+  public static clientCertificateModeRequiredInfoBubbleMessage = 'clientCertificateModeRequiredInfoBubbleMessage';
+  public static clientCertificateModeAllowInfoBubbleMessage = 'clientCertificateModeAllowInfoBubbleMessage';
+  public static clientCertificateModeOptionalInfoBubbleMessage = 'clientCertificateModeOptionalInfoBubbleMessage';
+  public static clientCertificateModeIgnoreInfoBubbleMessage = 'clientCertificateModeIgnoreInfoBubbleMessage';
   public static certificateExlusionPaths = 'certificateExlusionPaths';
   public static editCertificateExlusionPaths = 'editCertificateExlusionPaths';
   public static noExclusionRulesDefined = 'noExclusionRulesDefined';
@@ -1636,8 +1641,9 @@ export class PortalResources {
   public static powershellPreview = 'powershellPreview';
   public static filter = 'filter';
   public static filterAppSettings = 'filterAppSettings';
-  public static gridItemsCountAriaLabelSingular = 'gridItemsCountAriaLabelSingular';
-  public static gridItemsCountAriaLabelPlural = 'gridItemsCountAriaLabelPlural';
+  public static gridItemsCountAriaLabel = 'gridItemsCountAriaLabel';
+  public static result = 'result';
+  public static results = 'results';
   public static filterConnectionStrings = 'filterConnectionStrings';
   public static readOnlyJava = 'readOnlyJava';
   public static validate_workingDirectory = 'validate_workingDirectory';
@@ -2381,6 +2387,8 @@ export class PortalResources {
   public static staticSite_visitorPasswordRequired = 'staticSite_visitorPasswordRequired';
   public static staticSite_confirmVisitorPasswordRequired = 'staticSite_confirmVisitorPasswordRequired';
   public static staticSite_generalSettingsUpdate = 'staticSite_generalSettingsUpdate';
+  public static staticSite_loadingGeneralSettings = 'staticSite_loadingGeneralSettings';
+  public static staticSite_loadingApplicationSettings = 'staticSite_loadingApplicationSettings';
   public static staticSite_generalSettingsUpdateWithSuccess = 'staticSite_generalSettingsUpdateWithSuccess';
   public static staticSite_generalSettingsUpdateWithFailure = 'staticSite_generalSettingsUpdateWithFailure';
   public static staticSite_generalSettingsUpdateWithFailureNoMessage = 'staticSite_generalSettingsUpdateWithFailureNoMessage';
